@@ -22,6 +22,9 @@ import TVFullCast from "./pages/TVFullCast";
 import CompanyDetail from "./pages/CompanyDetail";
 import KeywordDetail from "./pages/KeywordDetail";
 import YearInReview from "./pages/YearInReview";
+import Feed from "./pages/Feed";
+import UserProfile from "./pages/UserProfile";
+import FindUsers from "./pages/FindUsers";
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -211,6 +214,30 @@ export default function App() {
         element={
           <ProtectedRoute>
             <YearInReview />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/feed"
+        element={
+          <ProtectedRoute>
+            <Feed />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/user/:username"
+        element={
+          <ProtectedRoute>
+            <UserProfile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/users"
+        element={
+          <ProtectedRoute>
+            <FindUsers />
           </ProtectedRoute>
         }
       />
