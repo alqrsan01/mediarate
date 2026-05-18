@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mysql -u root -e \"SHOW TABLES; DESCRIBE user_media;\" mediarate)",
+      "PowerShell(& \"C:\\\\laragon\\\\bin\\\\mysql\\\\mysql-8.0.30-winx64\\\\bin\\\\mysql.exe\" -u root -e \"SHOW TABLES; DESCRIBE user_media;\" mediarate 2>&1)",
+      "Read(//c//**)",
+      "Read(//mnt/**)",
+      "Bash(/c/laragon/bin/mysql/mysql-8.4.3-winx64/bin/mysql.exe -u root mediarate -e 'SELECT COUNT\\(*\\), show_id FROM user_episode_ratings GROUP BY show_id;')",
+      "Bash(/c/laragon/bin/mysql/mysql-8.4.3-winx64/bin/mysql.exe -u root mediarate -e 'SELECT * FROM user_media;')",
+      "Bash(/c/laragon/bin/mysql/mysql-8.4.3-winx64/bin/mysql.exe -u root mediarate -e 'SELECT * FROM user_episode_ratings WHERE show_id = 56570 LIMIT 5;')",
+      "Bash(npx tsc *)",
+      "Bash(node_modules\\\\.bin\\\\tsc --noEmit)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(npm run *)",
+      "PowerShell(cmd /c \"dir C:\\\\laragon /a\")",
+      "PowerShell(cmd /c \"dir C:\\\\laragon\\\\www\\\\mediarate-api /a\")",
+      "PowerShell(cmd /c \"dir C:\\\\laragon\\\\www\\\\mediarate-api\\\\movies /a\")",
+      "PowerShell(cmd /c \"dir C:\\\\laragon\\\\www\\\\mediarate-api\\\\tv /a\")",
+      "PowerShell(cmd /c \"cd \"C:\\\\Users\\\\Alqrsan\\\\Desktop\\\\My Projects\\\\MediaRate\" && node_modules\\\\.bin\\\\tsc.cmd --noEmit 2>&1\")",
+      "PowerShell(cmd /c \"cd /d \"\"C:\\\\Users\\\\Alqrsan\\\\Desktop\\\\My Projects\\\\MediaRate\"\" && node_modules\\\\.bin\\\\tsc.cmd --noEmit 2>&1\")",
+      "PowerShell(cmd /c \"cd /d \"\"C:\\\\Users\\\\Alqrsan\\\\Desktop\\\\My Projects\\\\MediaRate\"\" && npx tsc --noEmit 2>&1\")",
+      "PowerShell(cmd /c \"cd /d \"\"C:\\\\Users\\\\Alqrsan\\\\Desktop\\\\My Projects\\\\MediaRate\"\" && npm run build 2>&1\")",
+      "PowerShell(Start-Sleep -Seconds 8; \\(Get-Item \"C:\\\\Users\\\\Alqrsan\\\\Desktop\\\\mediarate_dump.sql\" -ErrorAction SilentlyContinue\\).Length)",
+      "PowerShell($proc = Start-Process -FilePath \"C:\\\\xampp\\\\apache\\\\bin\\\\httpd.exe\" -ArgumentList \"-f `\"C:\\\\xampp\\\\apache\\\\conf\\\\httpd.conf`\"\" -PassThru -WindowStyle Hidden; Write-Host \"PID: $\\($proc.Id\\)\"; Start-Sleep -Seconds 4; netstat -ano | findstr \":80 \" | Select-Object -First 3)"
+    ]
+  }
+}
