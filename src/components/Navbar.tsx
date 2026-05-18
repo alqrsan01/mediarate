@@ -256,6 +256,8 @@ export default function Navbar() {
             <div className="absolute right-0 mt-2 w-44 bg-gray-800 rounded-xl shadow-xl border border-gray-700 overflow-hidden">
               <Link to="/profile"  onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-700">Profile</Link>
               <Link to="/my-list"  onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-700">My List</Link>
+              <Link to="/feed"     onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-700">Activity Feed</Link>
+              <Link to="/users"    onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-700">Find People</Link>
               <Link to="/settings" onClick={() => setMenuOpen(false)} className="block px-4 py-3 text-sm text-gray-200 hover:bg-gray-700">Settings</Link>
               <button
                 onClick={async () => {
